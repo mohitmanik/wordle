@@ -34,7 +34,7 @@ function App() {
     setwon(false);
     setLose(false);
 
-    fetch("http://localhost:8000/data")
+    fetch("https://wordle-phi-tan.vercel.app/data")
       .then(res => res.json())
       .then(json => {
         const index = Math.floor(Math.random() * json.length);
