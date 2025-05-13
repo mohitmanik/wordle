@@ -39,6 +39,7 @@ function App() {
       .then(json => {
         const index = Math.floor(Math.random() * json.length);
         setData(json[index].toUpperCase());
+        console.log()
         console.log("New Word:", json[index]);
       })
       .catch(e => console.error("Error fetching new word:", e));
@@ -112,7 +113,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("http://localhost:8000/data");
+        const res = await fetch("https://wordle-1-x96q.onrender.com/data");
         const json = await res.json();
         const index = Math.floor(Math.random() * json.length);
         setData(json[index].toUpperCase());
